@@ -10,7 +10,7 @@ User Inputs:
 
 USAGE:
 cd <DOMAIN_HOME>
-<FMW_ORACLE_COMMON_LOCATION>/common/bin/wlst.sh /app/jdbc_pwd_update_autods_2_url_update.py
+<FMW_ORACLE_COMMON_LOCATION>/common/bin/wlst.sh ds_pwd_jdbc_url_updation.py
 
 for example in my case:
 DOMAIN_HOME = /app/user_projects/domains/bi
