@@ -1,0 +1,70 @@
+This script must be execute from DOMAIN_HOME and it will prompt for 5 types of user inputs and based on inputs, it will make the necessary changes.
+
+User Inputs:
+1. Enter WLS Domain Path
+2. Enter the new password in plain text format
+3. Enter RCU Schema prefix
+4. Do you want to replace ATP DB Connection Url (yes/no)
+5. Enter the ATP DB connection url
+
+
+USAGE:
+cd <DOMAIN_HOME>
+<FMW_ORACLE_COMMON_LOCATION>/common/bin/wlst.sh /app/jdbc_pwd_update_autods_2_url_update.py
+
+for example in my case:
+DOMAIN_HOME = /app/user_projects/domains/bi
+FMW_ORACLE_COMMON_LOCATION = /app/fmw12214/oracle_common
+
+
+
+[oracle@mymach1 bi]$ cd /app/user_projects/domains/bi
+[oracle@mymach1 bi]$ /app/fmw12214/oracle_common/common/bin/wlst.sh /app/jdbc_pwd_update_autods_2_url_update.py
+
+Initializing WebLogic Scripting Tool (WLST) ...
+
+Welcome to WebLogic Server Administration Scripting Shell
+
+Type help() for help on available commands
+
+Enter WLS Domain Path: /app/user_projects/domains/bi
+Enter the new password in plain text format: RVzaroxt__273
+Enter RCU Schema prefix: DEV4
+Do you want to replace ATP DB Connection Url (yes/no): yes
+Enter the ATP DB connection url: jdbc:oracle:thin:@(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=l4nwdzji.adb.us-phoenix-1.oraclecloud.com))(connect_data=(service_name=lcnfq4z5futw068_dmstst_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=no)))
+drw-   WLSSchemaDataSource
+drw-   LocalSvcTblDataSource
+drw-   opss-data-source
+drw-   opss-audit-viewDS
+drw-   opss-audit-DBDS
+drw-   biplatform_datasource
+drw-   mds-owsm
+--------Updating password for WLSSchemaDataSource--------
+--------New Password updated successfully for WLSSchemaDataSource--------
+--------Updating connection pool url for WLSSchemaDataSource--------
+--------Connection pool url updated successfully for WLSSchemaDataSource--------
+--------Updating password for LocalSvcTblDataSource--------
+--------New Password updated successfully for LocalSvcTblDataSource--------
+--------Updating connection pool url for LocalSvcTblDataSource--------
+--------Connection pool url updated successfully for LocalSvcTblDataSource--------
+--------Updating password for opss-data-source--------
+--------New Password updated successfully for opss-data-source--------
+--------Updating connection pool url for opss-data-source--------
+--------Connection pool url updated successfully for opss-data-source--------
+--------Updating password for opss-audit-viewDS--------
+--------New Password updated successfully for opss-audit-viewDS--------
+--------Updating connection pool url for opss-audit-viewDS--------
+--------Connection pool url updated successfully for opss-audit-viewDS--------
+--------Updating password for opss-audit-DBDS--------
+--------New Password updated successfully for opss-audit-DBDS--------
+--------Updating connection pool url for opss-audit-DBDS--------
+--------Connection pool url updated successfully for opss-audit-DBDS--------
+--------Updating password for biplatform_datasource--------
+--------New Password updated successfully for biplatform_datasource--------
+--------Updating connection pool url for biplatform_datasource--------
+--------Connection pool url updated successfully for biplatform_datasource--------
+--------Updating password for mds-owsm--------
+--------New Password updated successfully for mds-owsm--------
+--------Updating connection pool url for mds-owsm--------
+--------Connection pool url updated successfully for mds-owsm--------
+
